@@ -1,0 +1,52 @@
+import psycopg2
+import os
+class Loader:
+    def __init__(self):
+        self.db_host = "local"
+        self.db_name = "имя_базы"
+        self.db_user = "ваш_пользователь"
+        self.db_password = "ваш_пароль"
+        self.conn = None
+
+    def connect(self):
+        try:
+            self.conn = psycopg2.connect(
+                host=self.db_host,
+                database=self.db_name,
+                user=self.db_user,
+                password=self.db_password
+            )
+            return True
+        except psycopg2.Error as e:
+            print(f"Database connection error: {e}")
+            return False
+    def get_skateboards(self, height, weight, budget, purpose):
+        if not self.conn:
+            print("No database connection")
+            return []
+        try:
+            with self.conn.cursor() as cursor:
+                cursor.execute("""
+                    SELECT * FROM skateboards
+                    WHERE min_height <= %s AND max_height >= %s
+                    AND min_weight <= %s AND max_weight >= %s
+                    AND price <= %s
+                    AND suitable_for_purpose LIKE %s
+                    ORDER BY price
+                """, (height, height, weight, weight, budget, f"%{purpose}%"))
+
+                columns = [desc[0] for desc in cursor.description]
+                results = []
+                for row in cursor.fetchall():
+                    results.append(dict(zip(columns, row)))
+                return results
+        except psycopg2.Error as e:
+            print(f"Database error: {e}")
+            return []
+        except Exception as e:
+            print(f"Error: {e}")
+            return []
+
+    def close(self):
+        if self.conn:
+            self.conn.close()
