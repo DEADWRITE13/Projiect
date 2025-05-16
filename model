@@ -3,9 +3,9 @@ import os
 class Loader:
     def __init__(self):
         self.db_host = "local"
-        self.db_name = "имя_базы"
-        self.db_user = "ваш_пользователь"
-        self.db_password = "ваш_пароль"
+        self.db_name = "postgres"
+        self.db_user = "postgres"
+        self.db_password = "DB_PASSWORD"
         self.conn = None
 
     def connect(self):
