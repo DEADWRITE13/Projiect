@@ -1,0 +1,21 @@
+
+
+.siteIcon {
+    height: 80px;  /* Нет пробела между 30 и px */
+    width: 80px;   /* weight -> width, и нет пробела */
+}
+
+.siteHeadFlex{
+    display:  flex;
+     flex-direction: row ; /*Меняем основную ось*, есть реверс*/
+     /*flex-wrap: wrap;за перенос на новую*/
+     justify-content: space-between; /*расстояние между элементами на главной оси*/
+     background:linear-gradient(to right, Fuchsia,Violet, pink) ;
+     width: 100%; /* Ширина занимает всю доступную ширину */
+     height: 80px; /*  Новая высота (пример) */
+}
+
+.zapolnitel{
+    color: rgba(255, 255, 255, 0); /* Белый цвет с 0% прозрачностью (полностью прозрачный) */
+
+}
