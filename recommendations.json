@@ -1,0 +1,52 @@
+{
+    "parameters": {
+        "weight": 43,
+        "purpose": "1",
+        "budget": 15000.0
+    },
+    "recommendations": [
+        {
+            "name": "Ridex 80.3 x 20.3",
+            "price": 4000.0,
+            "weight": 90,
+            "link": "К сожалению отсутсвует",
+            "image": "images/scatesRecomendation/Ridex 80.3 x 20.3.jpg"
+        },
+        {
+            "name": "700 - 31",
+            "price": 4300.0,
+            "weight": 100,
+            "link": "https://www.wildberries.ru/catalog/323141293/detail.aspx",
+            "image": "images/scatesRecomendation/700 - 31.png"
+        },
+        {
+            "name": "TechTeam Liberty Грибы",
+            "price": 6000.0,
+            "weight": 100,
+            "link": "https://market.yandex.ru/product--skeitbord-liberty/115494785?sku=103080620744&uniqueId=115587912&do-waremd5=wK3MS2Dpy5E2yTEpYaA4Bg",
+            "image": "images/scatesRecomendation/TechTeam Liberty Грибы.png"
+        },
+        {
+            "name": "Footwork 8 X 31.5 T-Rex",
+            "price": 7500.0,
+            "weight": 90,
+            "link": "https://www.kant.ru/catalog/product/1730719-skeytbord_footwork_8_x_31_5_t_rex/",
+            "image": "images/scatesRecomendation/Footwork 8 X 31.5 T-Rex.png"
+        },
+        {
+            "name": "Юнион NuPogodi",
+            "price": 7500.0,
+            "weight": 100,
+            "link": "https://www.unionboards.ru/product/skejtbord-v-sbore-yunion-skejt-nupogodi-8-32?",
+            "image": "images/scatesRecomendation/Юнион NuPogodi.png"
+        },
+        {
+            "name": "Toy Machine Vice Dead Monster ",
+            "price": 10000.0,
+            "weight": 100,
+            "link": "https://proskateshop.ru/skejtbordy/dlja-trjukov/skejtbord-v-sbore-toy-machine-vice-dead-monster-83175-trjukovij-dlja-detej--podrostkov.html",
+            "image": "images/scatesRecomendation/Toy Machine Vice Dead Monster.jpg"
+        }
+    ],
+    "generated_at": "2025-05-28T23:33:12.020564"
+}

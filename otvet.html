@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рекомендации - Scatemate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="https://www.pngplay.com/wp-content/uploads/2/Skateboard-Transparent-Images.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://www.pngplay.com/wp-content/uploads/2/Skateboard-Transparent-Images.png" type="image/x-icon">
+</head>
+<body>
+    <div class="siteHeadFlex">
+        <img class="siteIcon" src="https://www.pngplay.com/wp-content/uploads/2/Skateboard-Transparent-Images.png">
+        <a href="/" class="exile-regular">Scatemate</a>
+        <h2 class="zapolnitel">Текстзаполнитель</h2>
+    </div>
+
+    <div class="container">
+        <div class="user-params">
+            <h2>Ваши параметры:</h2>
+            <ul>
+                <li>Вес: {{ params.weight }} кг</li>
+                <li>Цель: {{ params.purpose }}</li>
+                <li>Бюджет: {{ params.budget }} ₽</li>
+            </ul>
+        </div>
+
+        <div class="skateboard-grid">
+            {% for skate in recommendations %}
+            <div class="skate-card">
+                <div class="skate-image">
+                    <img src="{{ url_for('static', filename=skate.image) }}" alt="{{ skate.name }}" onerror="this.onerror=null;this.src='{{ url_for('static', filename='images/scatesRecomendation/default.jpg') }}'">
+                </div>
+                <div class="skate-info">
+                    <h3>{{ skate.name }}</h3>
+                    <p class="brand">{{ skate.brand }}</p>
+                    <div class="specs">
+                        <p><strong>Размер:</strong> {{ skate.weight }}"</p>
+                        <p><strong>Вес:</strong> {{ skate.weight }} кг</p>
+                    </div>
+                    <div class="price-block">
+                        <span class="price">{{ skate.price }} ₽</span>
+                        <a href="{{ skate.link }}" class="btn-buy" target="_blank">Купить</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
