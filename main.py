@@ -2,9 +2,8 @@ import json
 from flask import Flask, render_template, request, jsonify, url_for
 import os
 from datetime import datetime
-from werkzeug.utils import secure_filename
 from model import SkateboardModel
-from decimal import Decimal  # Import Decimal
+from decimal import Decimal  
 
 app = Flask(__name__)
 app.debug = True
